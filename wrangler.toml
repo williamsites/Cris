@@ -1,20 +1,19 @@
 # Cris Barber SaaS · Cloudflare
-# Teste local:   npx wrangler dev            (usa D1 local, sem afetar a produção)
-# Criar o banco: npx wrangler d1 create cris-barber-db   → copie o database_id abaixo
-# Publicar:      npm run build && npx wrangler deploy
+# Teste local: npx wrangler dev
+# Publicar: npm run build && npx wrangler deploy
 
-name = "cris-barber"
+name = "crisbarbearia"
 main = "worker/index.js"
 compatibility_date = "2026-10-01"
 
-# assets estáticos (o build do Vite gera ./dist)
+# Assets estáticos gerados pelo Vite
 [assets]
 directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
 
-# banco de dados do SaaS (agendamentos, serviços, produtos, profissionais)
+# Banco de dados D1
 [[d1_databases]]
 binding = "DB"
 database_name = "cris-barber-db"
-database_id = "SUBSTITUA-PELO-ID-DO-SEU-BANCO"
+database_id = "9f17dd95-9cda-4e02-940a-e7adf8684c1a"
