@@ -1,0 +1,33 @@
+{
+  "name": "cris-barber-saas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --force",
+    "test": "npm run test:engine && npm run test:render",
+    "test:engine": "esbuild tests/engine.test.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/engine.test.mjs --log-level=warning && node node_modules/.cache/engine.test.mjs",
+    "test:render": "esbuild tests/render.test.tsx --bundle --platform=node --format=cjs --outfile=node_modules/.cache/render.test.cjs --log-level=warning && node node_modules/.cache/render.test.cjs 2>/dev/null",
+    "test:deployed": "esbuild tests/deployed.test.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/deployed.test.mjs --log-level=warning && node node_modules/.cache/deployed.test.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9",
+    "wrangler": "^4.150.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261006.1": true
+  }
+}

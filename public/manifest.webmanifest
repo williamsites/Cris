@@ -1,0 +1,22 @@
+{
+  "name": "Cris Barber · Barbearia e Agendamento",
+  "short_name": "Cris Barber",
+  "description": "SaaS de agendamento da Cris Barber São Leopoldo: serviços, produtos, profissionais e horários disponíveis em tempo real.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05060a",
+  "theme_color": "#05060a",
+  "lang": "pt-BR",
+  "categories": ["lifestyle", "business", "shopping"],
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Agendar horário", "url": "/agendar" },
+    { "name": "Meus agendamentos", "url": "/meus-agendamentos" },
+    { "name": "Painel ADM", "url": "/adm" }
+  ]
+}
